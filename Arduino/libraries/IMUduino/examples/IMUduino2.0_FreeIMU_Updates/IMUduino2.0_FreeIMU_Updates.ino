@@ -54,7 +54,8 @@
 //#include <Adafruit_BLE_UART.h>
 //Adafruit_BLE_UART BTLEserial = Adafruit_BLE_UART(10, 7, 9); // REQ, RDY, RST
 
-int ypr[9];
+//int ypr[9];
+float ypr[3];
 //char chrData[17]; // Yaw (5 bytes), Pitch (5 bytes), Roll (5 bytes) ...delimeter is a pipe '|'
 
 // Set the FreeIMU object
@@ -71,10 +72,11 @@ void setup() {
 }
 
 void loop() {
-  
-//  if (ACI_EVT_CONNECTED == BTLEserial.pollACI()) {
+  //BTLEserial.pollACI();
+  //if (ACI_EVT_CONNECTED == BTLEserial.getState()) {
     
-    my3IMU.getRawValues(ypr);
+//    my3IMU.getRawValues(ypr);
+    my3IMU.getYawPitchRoll(ypr);
 
 //    dtostrf(ypr[0], 1, 1, &chrData[0]);
 //    dtostrf(ypr[1], 1, 1, &chrData[5]);
@@ -82,22 +84,24 @@ void loop() {
 //    chrData[5] = chrData[10] = '|';
   
 //    BTLEserial.write((byte*)chrData, 15);
-    Serial.print(ypr[0]);
-    Serial.print(ypr[1]);
-    Serial.print(ypr[2]);
-    Serial.print(ypr[3]);
-    Serial.print(ypr[4]);
-    Serial.print(ypr[5]);
-    Serial.print(ypr[6]);
-    Serial.print(ypr[7]);
-    Serial.print(ypr[8]);
-    Serial.println(ypr[9]);
+
 //    Serial.print(ypr[0]);
-//    Serial.print(F("|"));
 //    Serial.print(ypr[1]);
-//    Serial.print(F("|"));
 //    Serial.print(ypr[2]);
-//    Serial.println(F(""));
-//  }
+//    Serial.print(ypr[3]);
+//    Serial.print(ypr[4]);
+//    Serial.print(ypr[5]);
+//    Serial.print(ypr[6]);
+//    Serial.print(ypr[7]);
+//    Serial.print(ypr[8]);
+//    Serial.println(ypr[9]);
+    
+    Serial.print(ypr[0]);
+    Serial.print(F("|"));
+    Serial.print(ypr[1]);
+    Serial.print(F("|"));
+    Serial.print(ypr[2]);
+    Serial.println(F(""));
+  //}
 }
 
