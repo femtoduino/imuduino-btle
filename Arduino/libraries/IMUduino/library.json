@@ -1,0 +1,18 @@
+{
+  "name": "IMUduino",
+  "keywords": "imuduino, imu, ble, btle",
+  "description": "IMUduino: ATmega32u4 (Leonardo) with Nordic nRF8001 Bluetooth LE and 9/10 DOM/DOF orientation-sensing IMU",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/femtoduino/imuduino-btle.git"
+  },
+  "frameworks": "arduino",
+  "platforms": "atmelavr",
+  "include":  "Arduino/libraries/IMUduino",
+  "exclude": [
+    "Arduino/libraries/IMUduino/[Ldv]*",
+    "Arduino/libraries/IMUduino/calibration_old"
+  ],
+  "examples": "Arduino/libraries/IMUduino/examples/*/*.ino"
+}
