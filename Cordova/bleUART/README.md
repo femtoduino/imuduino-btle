@@ -110,7 +110,7 @@ ionic platform add android [ios]
 Note, to install the evothings cordova plugin, run the following from within the Ionic project folder:
 
 ```
-ionic plugin add com.evothings.ble
+ionic plugin add cordova-plugin-ble
 ```
 
 To upload the Ionic app to Android devices, connect a USB cable, enable USB debugging on your Android device, then run the following from within your Ionic project:
