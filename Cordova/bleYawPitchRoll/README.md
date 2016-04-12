@@ -1,4 +1,6 @@
-# Example Yaw-Pitch-Role app
+# [WORK IN PROGRESS] Example Yaw-Pitch-Role app
+
+# DISCLAIMER: This example is currently not working at all 
 
 This example requires the IMUduino_Bluetooth_UART_YawPitchRoll sketch to be loaded on your IMUduino board. Open up the Arduino Serial Monitor to start the board's routines.
 
